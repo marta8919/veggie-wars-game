@@ -6,6 +6,7 @@
     <title>Veggie wars</title>
     <link rel="stylesheet" href="/index.css">
     <link href="https://fonts.googleapis.com/css2?family=Coming+Soon&family=VT323&display=swap" rel="stylesheet">
+    <link rel="icon" href="/images/plate.png">
 </head>
 <body>
 
@@ -13,26 +14,27 @@
         <h1>Veggie wars</h1>
     </div>
         
-    <!-- <div id="intro" class="card">
-        <p class="text">Surviving some events as a veggie person sometimes is hard,avoid the chicken pieces to increase your score and help make this world abetter place 🙂</p>
-        <button class="text" id="start">
+    <div id="intro" class="card">
+        <p class="text">Surviving some events as a veggie person sometimes is hard, keept the chicken out of your plate to increase the score and help make this world abetter place 🙂</p>
+        <div class="images">
             <img src="/images/pollo.png" alt="chicken image">
-            Start Game
-        </button>
-    </div> -->
+            <img src="/images/plate.png" alt="plate">
+        </div>
+        <button class="text" id="start">Start Game</button>
+    </div>
+
+    <h3 class="text hidden" id="cardFinalScore">Score : <span id="finalScore" class="text"></span></h3>
         
     <!-- <div id="game-over" class="card">
-        <h3 class="text">Score : <span class="text" id="score">0</span></h3>
-        <p class="text">Nooo! you've contributed to an evil industry, and because ofyou a cute chicken just died ☹️</p>
+        <p class="text">Oh nooo !<br> you've contributed to an evil industry, and because of it a cute chicken just died ☹️</p>
         <button class="text" id="re-start">Re-Start the game</button>
     </div> -->
-        
-        <canvas width="1000" height="800" id="canvas"></canvas>
 
+    <canvas width="1000" height="800" id="canvas" class="hidden"></canvas>
 
-    <!-- <aside>
-         <h3 class="text">Score : <span class="text" id="scoreResult"></span></h3>
-    </aside> -->
+    <footer class="text">
+        <p>© 2020 Created by <a href="http://martagg.com">Marta Gilabert</a> <br> Powered by <u><a href="/images/june.jpg" class="june text-white">June v1.0</a></u></p>
+    </footer>
 
     <script src="/index.js"></script>
 
