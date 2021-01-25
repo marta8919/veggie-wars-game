@@ -1,0 +1,65 @@
+:root {
+    --green : #06d6a0;
+    --light-green: #f8ffe5;
+    --dark-green: #1b9aaa;
+    --yellow: #ffc43d;
+    --magenta: #ef476f;
+}
+
+body {
+    background-color: var(--green);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+#header {
+    font-family: 'VT323', monospace;
+    font-size: 40px;
+    color: var(--magenta);
+    text-shadow: 3px 3px black;
+}
+
+.text {
+    font-family: 'Coming Soon', cursive;
+}
+
+.card {
+    background-color: var(--light-green);
+    border-radius: 5%;
+    width: 500px;
+    padding: 50px;
+    text-align: center;
+    font-size: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+button {
+    background-color: var(--yellow);
+    border-color: var(--light-green);
+    font-size: 20px;
+    padding: 20px;
+    border-radius: 10%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+button:hover {
+    background-color: var(--dark-green);
+    color: var(--light-green);
+    font-size: 25px;
+    padding: 16px;
+}
+
+.hidden {
+    display: none;
+}
+
+img {
+    width: 80px;
+    margin: 10px;
+}
