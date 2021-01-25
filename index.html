@@ -9,26 +9,31 @@
     <link rel="icon" href="/images/plate.png">
 </head>
 <body>
-
+    <audio src="./music/battle.mp3" id="sound"></audio>
+    <audio src="./music/yell.ogg" id="yell"></audio>
     <div id="header">
         <h1>Veggie wars</h1>
     </div>
         
     <div id="intro" class="card">
-        <p class="text">Surviving some events as a veggie person sometimes is hard, keept the chicken out of your plate to increase the score and help make this world abetter place 🙂</p>
+        <p class="text">Surviving some events as a veggie person sometimes is hard, keep the chicken out of your plate to increase the score and help make this world a better place 🙂</p>
         <div class="images">
             <img src="/images/pollo.png" alt="chicken image">
             <img src="/images/plate.png" alt="plate">
         </div>
-        <button class="text" id="start">Start Game</button>
+        <button class="text btn" id="start">Start Game</button>
     </div>
 
-    <h3 class="text hidden" id="cardFinalScore">Score : <span id="finalScore" class="text"></span></h3>
+    <div class="group-btn">    
+        <h3 class="text hidden" id="cardFinalScore">Score : <span id="finalScore" class="text"></span></h3>
+        <button class="text secondary-btn hidden" id="pausebtn">Pause</button>
+    </div>
+
         
-    <!-- <div id="game-over" class="card">
+    <div id="game-over" class="card hidden">
         <p class="text">Oh nooo !<br> you've contributed to an evil industry, and because of it a cute chicken just died ☹️</p>
-        <button class="text" id="re-start">Re-Start the game</button>
-    </div> -->
+        <button class="text btn" id="re-start">Re-Start the game</button>
+    </div>
 
     <canvas width="1000" height="800" id="canvas" class="hidden"></canvas>
 

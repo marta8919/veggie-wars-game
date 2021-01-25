@@ -38,7 +38,7 @@ body {
     align-items: center;
 }
 
-button {
+.btn {
     background-color: var(--yellow);
     border-color: var(--light-green);
     font-size: 20px;
@@ -50,13 +50,17 @@ button {
     align-items: center;
 }
 
-button:hover {
+.btn:hover {
     background-color: var(--dark-green);
     color: var(--light-green);
 }
 
 .hidden {
     display: none;
+}
+
+.fade {
+    opacity: 0;
 }
 
 footer{
@@ -71,6 +75,28 @@ footer a {
 
 footer a:hover{
     color: var(--magenta)
+}
+
+.secondary-btn {
+    background-color: var(--dark-green);
+    color: white;
+    font-size: 16px;
+    border-radius: 10%;
+    width: 90px;
+    height: 40px;
+}
+
+.secondary-btn:hover{
+    background-color: var(--yellow);
+    color: var(--dark-green);
+}
+
+.group-btn {
+    display: flex;
+    justify-content: space-between;
+    width: 1000px;
+    margin: 10px;
+    align-items: baseline;
 }
 
 
