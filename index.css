@@ -100,3 +100,10 @@ footer a:hover{
 }
 
 
+.link {
+    color: black;
+}
+
+.link:hover {
+    color: var(--dark-green);
+}

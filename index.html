@@ -11,15 +11,19 @@
 <body>
     <audio src="./music/battle.mp3" id="sound"></audio>
     <audio src="./music/yell.ogg" id="yell"></audio>
+    <audio src="/music/trumpets.mp3" id="trumpetsSound"></audio>
 
     <div id="header">
         <h1>Veggie wars</h1>
     </div>
         
     <div id="intro" class="card">
-        <p class="text">Surviving some events as a veggie person sometimes is hard, keep the chicken out of your plate to increase the score and help make this world a better place 🙂</p>
+        <p class="text">Surviving some events as a veggie person sometimes is hard, keep the animal products away from your plate and grab the plant based products to increase your score.<br><br> Acumulate minimum 10 points of score to help make this world a better place 🙂</p>
         <div class="images">
             <img src="/images/pollo.png" alt="chicken image">
+            <img src="/images/chuleta.png" alt="Chuleta">
+            <img src="/images/banana.png" alt="banana">
+            <img src="/images/eggplant.png" alt="eggplant">
             <img src="/images/plate.png" alt="plate">
         </div>
         <button class="text btn" id="start">Start Game</button>
@@ -32,8 +36,17 @@
 
         
     <div id="game-over" class="card hidden">
-        <p class="text">Oh nooo !<br> you've contributed to an evil industry, and because of it a cute chicken just died ☹️</p>
+        <p class="text">Oh nooo !<br> you've contributed to an evil industry, and because of it a cute animal just died ☹️</p>
         <button class="text btn" id="re-start">Re-Start the game</button>
+    </div>
+
+    <div class="text card hidden" id="greatGame">
+        <h1 class="text">Great Game</h1>
+        <p class="text">You've reached vegan level 5.</p>
+        <img src="/images/vegan.jpg" alt="">
+        <br>
+        <a href="https://www.vegansociety.com/go-vegan/why-go-vegan" class="link">I would like some more information about the topic 🙂</a>
+        <button class="text btn" id="startAgain">I wanna play more!</button>
     </div>
 
     <canvas width="1000" height="800" id="canvas" class="hidden"></canvas>
