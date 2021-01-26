@@ -175,5 +175,4 @@ startAgain.addEventListener('click', ()=>{
 pausebtn.addEventListener('click', ()=>{
     music.pause()
     clearInterval(intervalID)
-    pausebtn.innerHTML = 'Re-Start'
 })
