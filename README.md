@@ -1,4 +1,3 @@
-# veggie-wars-game
 ![](images/namegame.png)
 
 This game was created as part of the web development bootcamp at Ironhack
