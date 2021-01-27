@@ -135,18 +135,18 @@ function draw(){
 
     drawPlate()
     
-    if(score < 5){
+    if(score < 3){
         levelCard.innerHTML= 'Level 1 : Dinner with friends'
-    } else if (score > 5 && score < 10){
+    } else if (score > 3 && score < 7){
         levelCard.innerHTML = 'Level 2 : Christmas dinner'
         generateObstacle(fish, fishArr)
-    } else if (score > 10 && score < 14){
+    } else if (score >= 7 && score < 14){
         levelCard.innerHTML = 'Level 3 : BBQ'
         generateObstacle(chuleta, chuletaArr)
         generateObstacle(fish, fishArr)
     } 
     
-    if (score == 15){
+    if (score >= 14){
         generateObstacle(chuleta, chuletaArr)
         generateObstacle(fish, fishArr)
         greatGame()
