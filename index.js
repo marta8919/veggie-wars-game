@@ -28,6 +28,7 @@ function stopGame(){
     bananasArr = [{x:90, y:0}]
     fishArr = [{x:800, y:0}]
     music.pause()
+    clearInterval(intervalID)
     canvas.classList.add('hidden')
     pausebtn.classList.add('hidden')
     playbtn.classList.add('hidden')
@@ -41,8 +42,16 @@ function greatGame(){
     canvas.classList.add('hidden')
     pausebtn.classList.add('hidden')
     cardFinalScore.classList.add('hidden')
+    levelCard.classList.add('hidden')
+    playbtn.classList.add('hidden')
     clearInterval(intervalID)
     greatGameCard.classList.remove('hidden')
+    obstacle = [{x:0, y:0}]
+    chuletaArr = [{x:10, y:0}]
+    eggplantArr = [{x:70, y:0}]
+    bananasArr = [{x:90, y:0}]
+    fishArr = [{x:800, y:0}]
+    startGame()
 }
 
 function generateObstacle(img, array){
@@ -62,12 +71,13 @@ function generateObstacle(img, array){
 
         if (array[i].y == canvas.height){
             array[i].y = 0
+            array[i].x = Math.floor(Math.random()*canvas.width)
         }
 
         if ((array[i].y + plateHeight > canvas.height) && (array[i].x + obsWidth > plateX && array[i].x < plateX+plateWidth)) {
             stopGame()
             gameoverCard.classList.remove('hidden')
-            //yell.play()
+            yell.play()
         }
     }
 
@@ -93,8 +103,10 @@ function generatePoint (img, array){
             array[i].y = 0
         }
 
-        if ((array[i].y + plateHeight > canvas.height) && (array[i].x + obsWidth > plateX && array[i].x < plateX+plateWidth)) {
+        if ((array[i].y + obsHeight > canvas.height-plateHeight) && (array[i].x + obsWidth > plateX && array[i].x < plateX+plateWidth)) {
             score ++
+            array[i].y = -10
+            array[i].x = Math.floor(Math.random()*canvas.width)
             array.slice(i, 1)
         }
 
@@ -122,20 +134,21 @@ function draw(){
 
     drawPlate()
     
-    if(score < 10){
+    if(score < 5){
         levelCard.innerHTML= 'Level 1 : Dinner with friends'
-    } else if (score > 10 && score < 30){
+    } else if (score > 5 && score < 10){
         levelCard.innerHTML = 'Level 2 : Christmas dinner'
         generateObstacle(fish, fishArr)
-    } else if (score > 30 && score < 80){
+    } else if (score => 10 && score < 14){
         levelCard.innerHTML = 'Level 3 : BBQ'
         generateObstacle(chuleta, chuletaArr)
         generateObstacle(fish, fishArr)
-    } else if (score > 80){
+    } 
+    
+    if (score > 15){
         generateObstacle(chuleta, chuletaArr)
         generateObstacle(fish, fishArr)
         greatGame()
-        stopGame()
         trumpetsSound.play()
     }
 
@@ -144,7 +157,7 @@ function draw(){
 function startGame(){
     intervalID = setInterval(() => {
         requestAnimationFrame(draw)
-    }, 150)
+    }, 90)
 }
 
 
@@ -180,6 +193,7 @@ startAgain.addEventListener('click', ()=>{
     playbtn.classList.remove('hidden')
     levelCard.classList.remove('hidden')
     cardFinalScore.classList.remove('hidden')
+    music.load()
     music.play()
     score = 0
 })
@@ -192,7 +206,6 @@ pausebtn.addEventListener('click', ()=>{
 playbtn.addEventListener('click', ()=>{
     music.play()
 })
-
 
 window.addEventListener('load', ()=>{
     startGame()
