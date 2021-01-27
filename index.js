@@ -184,6 +184,7 @@ restart.addEventListener('click', ()=>{
     levelCard.classList.remove('hidden')
     music.play()
     score = 0
+    startGame()
 })
 
 startAgain.addEventListener('click', ()=>{
@@ -207,6 +208,6 @@ playbtn.addEventListener('click', ()=>{
     music.play()
 })
 
-window.addEventListener('load', ()=>{
-    startGame()
-})
+// window.addEventListener('load', ()=>{
+//     startGame()
+// })
