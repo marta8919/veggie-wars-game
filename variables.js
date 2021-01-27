@@ -53,10 +53,10 @@ banana.src= 'images/banana.png'
 let music = document.querySelector('#sound')
 let yell = document.querySelector('#yell')
 let trumpetsSound = document.querySelector('#trumpetsSound')
+music.volume = 0.10
 
 
 //CANVAS
-
 let canvas = document.querySelector('canvas')
 let ctx = canvas.getContext('2d')
 

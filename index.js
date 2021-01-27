@@ -39,6 +39,7 @@ function stopGame(){
 
 function greatGame(){
     music.pause()
+    trumpetsSound.play()
     canvas.classList.add('hidden')
     pausebtn.classList.add('hidden')
     cardFinalScore.classList.add('hidden')
@@ -139,19 +140,17 @@ function draw(){
     } else if (score > 5 && score < 10){
         levelCard.innerHTML = 'Level 2 : Christmas dinner'
         generateObstacle(fish, fishArr)
-    } else if (score => 10 && score < 14){
+    } else if (score > 10 && score < 14){
         levelCard.innerHTML = 'Level 3 : BBQ'
         generateObstacle(chuleta, chuletaArr)
         generateObstacle(fish, fishArr)
     } 
     
-    if (score > 15){
+    if (score == 15){
         generateObstacle(chuleta, chuletaArr)
         generateObstacle(fish, fishArr)
         greatGame()
-        trumpetsSound.play()
     }
-
 }
 
 function startGame(){
