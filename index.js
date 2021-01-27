@@ -26,11 +26,14 @@ function stopGame(){
     chuletaArr = [{x:10, y:0}]
     eggplantArr = [{x:70, y:0}]
     bananasArr = [{x:90, y:0}]
+    fishArr = [{x:800, y:0}]
     music.pause()
     canvas.classList.add('hidden')
     pausebtn.classList.add('hidden')
     cardFinalScore.classList.add('hidden')
+    levelCard.classList.add('hidden')
     clearInterval(intervalID)
+    scoreGameOverCard.innerHTML= `Your score is ${score} and you are at ${levelCard.innerHTML}.`
 }
 
 function greatGame(){
@@ -41,16 +44,14 @@ function greatGame(){
     clearInterval(intervalID)
     greatGameCard.classList.remove('hidden')
 }
- 
-
 
 function generateObstacle(img, array){
 
     for (let i = 0; i < array.length; i++){
         ctx.drawImage(img, array[i].x, array[i].y, obsWidth, obsHeight)
-        array[i].y += incrementY
+        array[i].y += incrementYObs
 
-        if (array.length < 10){
+        if (array.length < 8){
             if (array[i].y == 100){
                 array.push({
                     x: Math.floor(Math.random()*canvas.width-obsWidth),
@@ -80,7 +81,7 @@ function generatePoint (img, array){
         ctx.drawImage(img, array[i].x, array[i].y, obsWidth, obsHeight)
         array[i].y += incrementY
 
-        if (array.length < 4){
+        if (array.length < 8){
             if(array[i].y == 100){
                 array.push({
                     x:Math.floor(Math.random()*canvas.width-obsWidth),
@@ -94,9 +95,8 @@ function generatePoint (img, array){
         }
 
         if ((array[i].y + plateHeight > canvas.height) && (array[i].x + obsWidth > plateX && array[i].x < plateX+plateWidth)) {
-            score++
+            score ++
             array.slice(i, 1)
-            console.log(score)
         }
 
     }
@@ -108,7 +108,7 @@ function generatePoint (img, array){
 function draw(){
 
     ctx.drawImage(backImg, 0 , 0)
-    drawPlate()
+    
 
     if (isRightArrow && (plateX + plateWidth <= canvas.width)) {
         plateX += incrementPlate
@@ -118,11 +118,22 @@ function draw(){
     }
 
     generateObstacle(pollo, obstacle)
-    generateObstacle(chuleta, chuletaArr)
     generatePoint(banana, bananasArr)
     generatePoint(eggplant, eggplantArr)
 
-    if (score == 20){
+    drawPlate()
+
+    if (score > 10){
+        levelCard.innerHTML = 'Level 2 : Christmas dinner'
+        generateObstacle(fish, fishArr)
+    }
+
+    if (score > 20){
+        levelCard.innerHTML = 'Level 3 : BBQ'
+        generateObstacle(chuleta, chuletaArr)
+    }
+
+    if (score == 50){
         greatGame()
         stopGame()
         trumpetsSound.play()
@@ -131,22 +142,28 @@ function draw(){
 }
 
 
+window.addEventListener('load', ()=>{
+    startGame()
+})
 
 function startGame(){
     intervalID = setInterval(() => {
         requestAnimationFrame(draw)
-    }, 100)
+    }, 200)
 }
+
+
 
 
 //BTN EVENT LISTENERS
 
 start.addEventListener('click', ()=>{
-    music.play()
+    //music.play()
     introCard.classList.add('hidden')
     canvas.classList.remove('hidden')
     cardFinalScore.classList.remove('hidden')
-    //pausebtn.classList.remove('hidden')
+    levelCard.classList.remove('hidden')
+    pausebtn.classList.remove('hidden')
     startGame()
 })
 
@@ -156,6 +173,7 @@ restart.addEventListener('click', ()=>{
     canvas.classList.remove('hidden')
     pausebtn.classList.remove('hidden')
     cardFinalScore.classList.remove('hidden')
+    levelCard.classList.remove('hidden')
     music.play()
     startGame()
     score = 0

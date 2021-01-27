@@ -107,3 +107,8 @@ footer a:hover{
 .link:hover {
     color: var(--dark-green);
 }
+
+.friendsimg {
+    height: 400px;
+    width: 400px;
+}
