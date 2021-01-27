@@ -82,8 +82,9 @@ footer a:hover{
     color: white;
     font-size: 16px;
     border-radius: 10%;
-    width: 90px;
-    height: 40px;
+    width: 100px;
+    height: 60px;
+    margin: 10px;
 }
 
 .secondary-btn:hover{
@@ -111,4 +112,9 @@ footer a:hover{
 .friendsimg {
     height: 400px;
     width: 400px;
+}
+
+.musicbtn{
+    display: flex;
+    justify-content: baseline;
 }

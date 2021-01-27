@@ -11,6 +11,7 @@ let scoreGameOverCard = document.querySelector('#scoreGameOverCard')
 
 
 let pausebtn = document.querySelector('#pausebtn')
+let playbtn = document.querySelector('#playbtn')
 
 let greatGameCard = document.querySelector('#greatGame')
 

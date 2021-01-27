@@ -30,6 +30,7 @@ function stopGame(){
     music.pause()
     canvas.classList.add('hidden')
     pausebtn.classList.add('hidden')
+    playbtn.classList.add('hidden')
     cardFinalScore.classList.add('hidden')
     levelCard.classList.add('hidden')
     scoreGameOverCard.innerHTML= `Your score is ${score} and you are at ${levelCard.innerHTML} .`
@@ -123,13 +124,13 @@ function draw(){
 
     if(score < 10){
         levelCard.innerHTML= 'Level 1 : Dinner with friends'
-    } else if (score >= 10){
+    } else if (score > 10 && score < 30){
         levelCard.innerHTML = 'Level 2 : Christmas dinner'
         generateObstacle(fish, fishArr)
-    } else if (score >= 20){
+    } else if (score > 30 && score < 50){
         levelCard.innerHTML = 'Level 3 : BBQ'
         generateObstacle(chuleta, chuletaArr)
-    } else if (score == 50){
+    } else if (score > 50){
         greatGame()
         stopGame()
         trumpetsSound.play()
@@ -147,12 +148,13 @@ function startGame(){
 //BTN EVENT LISTENERS
 
 start.addEventListener('click', ()=>{
-    //music.play()
+    music.play()
     introCard.classList.add('hidden')
     canvas.classList.remove('hidden')
     cardFinalScore.classList.remove('hidden')
     levelCard.classList.remove('hidden')
     pausebtn.classList.remove('hidden')
+    playbtn.classList.remove('hidden')
     startGame()
 })
 
@@ -161,10 +163,10 @@ restart.addEventListener('click', ()=>{
     gameoverCard.classList.add('hidden')
     canvas.classList.remove('hidden')
     pausebtn.classList.remove('hidden')
+    playbtn.classList.remove('hidden')
     cardFinalScore.classList.remove('hidden')
     levelCard.classList.remove('hidden')
     music.play()
-    startGame()
     score = 0
 })
 
@@ -172,16 +174,19 @@ startAgain.addEventListener('click', ()=>{
     greatGameCard.classList.add('hidden')
     canvas.classList.remove('hidden')
     pausebtn.classList.remove('hidden')
+    playbtn.classList.remove('hidden')
     cardFinalScore.classList.remove('hidden')
     music.play()
     score = 0
-    startGame()
 })
 
 
 pausebtn.addEventListener('click', ()=>{
     music.pause()
-    clearInterval(intervalID)
+})
+
+playbtn.addEventListener('click', ()=>{
+    music.play()
 })
 
 
