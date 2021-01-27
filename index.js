@@ -121,16 +121,19 @@ function draw(){
     generatePoint(eggplant, eggplantArr)
 
     drawPlate()
-
+    
     if(score < 10){
         levelCard.innerHTML= 'Level 1 : Dinner with friends'
     } else if (score > 10 && score < 30){
         levelCard.innerHTML = 'Level 2 : Christmas dinner'
         generateObstacle(fish, fishArr)
-    } else if (score > 30 && score < 50){
+    } else if (score > 30 && score < 80){
         levelCard.innerHTML = 'Level 3 : BBQ'
         generateObstacle(chuleta, chuletaArr)
-    } else if (score > 50){
+        generateObstacle(fish, fishArr)
+    } else if (score > 80){
+        generateObstacle(chuleta, chuletaArr)
+        generateObstacle(fish, fishArr)
         greatGame()
         stopGame()
         trumpetsSound.play()
@@ -141,7 +144,7 @@ function draw(){
 function startGame(){
     intervalID = setInterval(() => {
         requestAnimationFrame(draw)
-    }, 200)
+    }, 150)
 }
 
 
@@ -175,6 +178,7 @@ startAgain.addEventListener('click', ()=>{
     canvas.classList.remove('hidden')
     pausebtn.classList.remove('hidden')
     playbtn.classList.remove('hidden')
+    levelCard.classList.remove('hidden')
     cardFinalScore.classList.remove('hidden')
     music.play()
     score = 0
