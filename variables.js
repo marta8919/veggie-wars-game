@@ -28,7 +28,6 @@ fish.src = 'images/fish.png'
 
 let obstacle = [{x:0, y:0}]
 let chuletaArr = [{x:100, y:0}]
-
 let fishArr = [{x:800, y:0}]
 let bananasArr = [{x:190, y:0}]
 let eggplantArr = [{x:640, y:0}]
@@ -36,8 +35,6 @@ let eggplantArr = [{x:640, y:0}]
 let plate = document.createElement('img')
 plate.src= 'images/plate.png'
 
-let avocado = document.createElement('img')
-avocado.src = 'images/avocado.png'
 
 let eggplant = document.createElement('img')
 eggplant.src= 'images/eggplant.png'
