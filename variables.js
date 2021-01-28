@@ -76,4 +76,9 @@ let plateWidth = 70
 let plateHeight = 70
 let incrementPlate = 30
 
+//ARROW BTNS
+
+let rightArrow = document.querySelector('#arrowRight')
+let leftArrow = document.querySelector('#arrowLeft')
+let groupArrowBtn = document.querySelector('#arrowBtnGroup')
 

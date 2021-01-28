@@ -38,6 +38,7 @@ body {
     align-items: center;
 }
 
+
 .btn {
     background-color: var(--yellow);
     border-color: var(--light-green);
@@ -118,3 +119,57 @@ footer a:hover{
     display: flex;
     justify-content: baseline;
 }
+
+.arrows {
+    background-color: var(--yellow);
+    border-radius: 20%;
+    border: none;
+    width: 40px;
+    height: 40px;
+    font-size: 20px;
+    display: none;
+} 
+
+.arrowBtnGroup{
+    width: 100px;
+}
+
+
+@media (max-width: 600px){
+    .card{
+        width: auto;
+        height: auto;
+    }
+
+    .greatImg, .friendsimg {
+        width: 250px;
+        height: 250px;
+        margin: 0;
+    }
+
+
+    canvas {
+        width: 370px;
+        height: 400px;
+    }
+
+    .group-btn{
+        width: auto;
+        display: flex;
+        justify-content: space-around;
+    }
+
+    .group-btn h3 {
+        margin: 5px;
+    }
+
+    .secondary-btn{
+        display: none;
+    }
+
+    .arrows{
+        display: inline;
+    }
+
+}
+

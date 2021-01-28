@@ -20,6 +20,17 @@ document.addEventListener('keyup', (event) => {
     isLeftArrow = false;
 })
 
+rightArrow.addEventListener('click', ()=>{
+    if (plateX + plateWidth <= canvas.width){
+        plateX += 40
+    }
+})
+
+leftArrow.addEventListener('click',()=>{
+    if (plateX > 0){
+        plateX -= 40
+    }  
+})
 
 function stopGame(){
     obstacle = [{x:0, y:0}]
@@ -34,6 +45,7 @@ function stopGame(){
     playbtn.classList.add('hidden')
     cardFinalScore.classList.add('hidden')
     levelCard.classList.add('hidden')
+    groupArrowBtn.classList.add('hidden')
     scoreGameOverCard.innerHTML= `Your score is ${score} and you are at ${levelCard.innerHTML} .`
 }
 
@@ -47,6 +59,7 @@ function greatGame(){
     playbtn.classList.add('hidden')
     clearInterval(intervalID)
     greatGameCard.classList.remove('hidden')
+    groupArrowBtn.classList.add('hidden')
     obstacle = [{x:0, y:0}]
     chuletaArr = [{x:10, y:0}]
     eggplantArr = [{x:70, y:0}]
@@ -170,6 +183,7 @@ start.addEventListener('click', ()=>{
     levelCard.classList.remove('hidden')
     pausebtn.classList.remove('hidden')
     playbtn.classList.remove('hidden')
+    groupArrowBtn.classList.remove('hidden')
     startGame()
 })
 
@@ -181,6 +195,8 @@ restart.addEventListener('click', ()=>{
     playbtn.classList.remove('hidden')
     cardFinalScore.classList.remove('hidden')
     levelCard.classList.remove('hidden')
+    groupArrowBtn.classList.remove('hidden')
+    music.load()
     music.play()
     score = 0
     startGame()
@@ -193,6 +209,7 @@ startAgain.addEventListener('click', ()=>{
     playbtn.classList.remove('hidden')
     levelCard.classList.remove('hidden')
     cardFinalScore.classList.remove('hidden')
+    groupArrowBtn.classList.remove('hidden')
     music.load()
     music.play()
     score = 0
