@@ -130,8 +130,18 @@ footer a:hover{
     display: none;
 } 
 
-.arrowBtnGroup{
-    width: 100px;
+#arrowBtnGroup{
+    width: 360px;
+    text-align: center;
+    margin-top: 10px;
+}
+
+#arrowRight {
+    margin-left: 125px;
+}
+
+#arrowLeft {
+    margin-right: 125px ;
 }
 
 
