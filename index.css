@@ -156,6 +156,7 @@ form {
 
 }
 
+
 @media (max-width: 600px) and (orientation: portrait){
     .card{
         width: auto;
