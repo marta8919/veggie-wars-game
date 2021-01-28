@@ -18,6 +18,8 @@ Basic functionalities, just chiken pieces falling from the top of the canvas, th
 - [x] Adding different gravity to the products
 - [x] Changing the name of the level as the score increases (level 1: dinner with friends, level 2: christmas, level 3 : bbq)
 - [x] Adding background music and sound effects
+- [x] Make it responsive
+- [] Use local storage to keep the name of the player and score
 
 ## Data structure
 
@@ -33,3 +35,5 @@ Basic functionalities, just chiken pieces falling from the top of the canvas, th
 ## Resources
 
 [Kanban board](https://www.notion.so/martagigu/9170f2e918354e8ea7f57573e6d6dac2?v=f2868bf3eda940c69885163f577f592c)
+
+[Presentation of the project](https://docs.google.com/presentation/d/1azrdnb_Ka-w9bCX0Y3LbINqaxeQ8reRmSB-G1pfMEqM/edit?usp=sharing)
