@@ -80,6 +80,7 @@ footer a:hover{
 
 .secondary-btn {
     background-color: var(--dark-green);
+    border-color: var(--dark-green);
     color: white;
     font-size: 16px;
     border-radius: 10%;
@@ -144,6 +145,16 @@ footer a:hover{
     margin-right: 20px ;
 } 
 
+form {
+    margin-top: 25px;
+}
+
+.third-btn{
+    background-color: var(--yellow);
+    border-radius: 10%;
+    border-color: var(--yellow);
+
+}
 
 @media (max-width: 600px) and (orientation: portrait){
     .card{
