@@ -54,6 +54,7 @@ let music = document.querySelector('#sound')
 let yell = document.querySelector('#yell')
 let trumpetsSound = document.querySelector('#trumpetsSound')
 music.volume = 0.10
+yell.volume = 0.10
 
 
 //CANVAS

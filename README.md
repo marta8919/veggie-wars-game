@@ -19,7 +19,7 @@ Basic functionalities, just chiken pieces falling from the top of the canvas, th
 - [x] Changing the name of the level as the score increases (level 1: dinner with friends, level 2: christmas, level 3 : bbq)
 - [x] Adding background music and sound effects
 - [x] Make it responsive
-- [] Use local storage to keep the name of the player and score
+- [0] Use local storage to keep the name of the player and score
 
 ## Data structure
 
