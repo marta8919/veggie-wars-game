@@ -124,8 +124,8 @@ footer a:hover{
     background-color: var(--yellow);
     border-radius: 20%;
     border: none;
-    width: 60px;
-    height: 60px;
+    width: 90px;
+    height: 70px;
     font-size: 40px;
     display: none;
 } 
@@ -137,12 +137,12 @@ footer a:hover{
 }
 
 #arrowRight {
-    margin-left: 110px;
-}
+    margin-left: 20px;
+} 
 
 #arrowLeft {
-    margin-right: 110px ;
-}
+    margin-right: 20px ;
+} 
 
 
 @media (max-width: 600px){
@@ -179,6 +179,10 @@ footer a:hover{
 
     .arrows{
         display: inline;
+    }
+
+    #header {
+        text-align: center;
     }
 
 }
