@@ -83,9 +83,9 @@ let groupArrowBtn = document.querySelector('#arrowBtnGroup')
 
 //LOCAL STORAGE
 
-const form = document.querySelector('form')
-const ul = document.querySelector('ul')
-const input = document.getElementById('item')   
-const clearBtn = document.querySelector('#clear')
+// const form = document.querySelector('form')
+// const ul = document.querySelector('ul')
+// const input = document.getElementById('item')   
+// const clearBtn = document.querySelector('#clear')
 
 

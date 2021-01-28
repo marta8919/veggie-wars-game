@@ -239,34 +239,32 @@ playbtn.addEventListener('click', ()=>{
 
 //LOCAL STORAGE
 
+// let itemsArray = localStorage.getItem('items')
+//   ? JSON.parse(localStorage.getItem('items'))
+//   : []
+
+// localStorage.setItem('items', JSON.stringify(itemsArray))
+
+// const liMaker = (text) => {
+//   const li = document.createElement('li')
+//   li.textContent = `Gamer : ${text}, Score : ${score}`
+//   ul.appendChild(li)
+// }
+
+// form.addEventListener('submit', function (e) {
+//   e.preventDefault()
+
+//   itemsArray.push(input.value)
+//   localStorage.setItem('items', JSON.stringify(itemsArray))
+//   liMaker(input.value)
+//   input.value = ''
+// })
+
+// clear.addEventListener('click', function () {
+//     localStorage.clear()
+//     while (ul.firstChild) {
+//       ul.removeChild(ul.firstChild)
+//     }
+//   })
 
 
-let itemsArray = localStorage.getItem('items')
-  ? JSON.parse(localStorage.getItem('items'))
-  : []
-
-
-localStorage.setItem('items', JSON.stringify(itemsArray))
-
-
-const liMaker = (text) => {
-  const li = document.createElement('li')
-  li.textContent = `Gamer : ${text}, Score : ${score}`
-  ul.appendChild(li)
-}
-
-form.addEventListener('submit', function (e) {
-  e.preventDefault()
-
-  itemsArray.push(input.value)
-  localStorage.setItem('items', JSON.stringify(itemsArray))
-  liMaker(input.value)
-  input.value = ''
-})
-
-clear.addEventListener('click', function () {
-    localStorage.clear()
-    while (ul.firstChild) {
-      ul.removeChild(ul.firstChild)
-    }
-  })
