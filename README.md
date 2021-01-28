@@ -37,3 +37,5 @@ Basic functionalities, just chiken pieces falling from the top of the canvas, th
 [Kanban board](https://www.notion.so/martagigu/9170f2e918354e8ea7f57573e6d6dac2?v=f2868bf3eda940c69885163f577f592c)
 
 [Presentation of the project](https://docs.google.com/presentation/d/1azrdnb_Ka-w9bCX0Y3LbINqaxeQ8reRmSB-G1pfMEqM/edit?usp=sharing)
+
+[Play!](https://marta8919.github.io/veggie-wars-game/)
