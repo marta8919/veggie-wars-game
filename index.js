@@ -3,7 +3,7 @@ function drawPlate(){
     ctx.drawImage(plate, plateX, canvas.height-plateHeight, plateWidth, plateHeight)
 }
 
-
+//event listeners for the movement of the plate
 document.addEventListener('keydown', (event) =>{
     if (event.keyCode == 39 || event.key == "ArrowRight") {
         isRightArrow = true;
@@ -32,6 +32,8 @@ leftArrow.addEventListener('click',()=>{
     }  
 })
 
+//STOP GAME WHEN LOOSING
+
 function stopGame(){
     obstacle = [{x:0, y:0}]
     chuletaArr = [{x:10, y:0}]
@@ -49,6 +51,7 @@ function stopGame(){
     scoreGameOverCard.innerHTML= `Your score is ${score} and you are at ${levelCard.innerHTML} .`
 }
 
+//GREAT GAME WHEN REACHING CERTAIN SCORE
 function greatGame(){
     music.pause()
     trumpetsSound.play()
@@ -68,6 +71,7 @@ function greatGame(){
     startGame()
 }
 
+//CREATING OBSTACLES
 function generateObstacle(img, array){
 
     for (let i = 0; i < array.length; i++){
@@ -98,7 +102,7 @@ function generateObstacle(img, array){
     finalScore.innerHTML = 'Score : ' + score
 }
 
-
+//CREATING ELEMENTS THAT INCREASES THE POINTS
 function generatePoint (img, array){
     for (let i = 0; i < array.length; i++){
         ctx.drawImage(img, array[i].x, array[i].y, obsWidth, obsHeight)
@@ -129,7 +133,7 @@ function generatePoint (img, array){
     finalScore.innerHTML = 'Score : ' + score
 }
 
-
+//MAIN FUNCTION
 function draw(){
 
     ctx.drawImage(backImg, 0 , 0)
@@ -141,10 +145,10 @@ function draw(){
     else if (isLeftArrow && plateX > 0) {
         plateX -= incrementPlate
     }
-
-    generateObstacle(pollo, obstacle)
+    
     generatePoint(banana, bananasArr)
     generatePoint(eggplant, eggplantArr)
+    generateObstacle(pollo, obstacle)
 
     drawPlate()
     
@@ -166,6 +170,7 @@ function draw(){
     }
 }
 
+//START GAME
 function startGame(){
     intervalID = setInterval(() => {
         requestAnimationFrame(draw)
@@ -174,7 +179,6 @@ function startGame(){
 
 
 //BTN EVENT LISTENERS
-
 start.addEventListener('click', ()=>{
     music.play()
     introCard.classList.add('hidden')
@@ -215,7 +219,14 @@ startAgain.addEventListener('click', ()=>{
     score = 0
 })
 
+teamvalorbtn.addEventListener('click', ()=>{
+    teamCard.classList.add('hidden')
+    introCard.classList.remove('hidden')
+    pikachu.play()
+})
 
+
+//MUSIC BTNS
 pausebtn.addEventListener('click', ()=>{
     music.pause()
 })
@@ -223,7 +234,3 @@ pausebtn.addEventListener('click', ()=>{
 playbtn.addEventListener('click', ()=>{
     music.play()
 })
-
-// window.addEventListener('load', ()=>{
-//     startGame()
-// })
