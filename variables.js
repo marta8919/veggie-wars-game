@@ -40,8 +40,8 @@ plate.src= 'images/plate.png'
 let eggplant = document.createElement('img')
 eggplant.src= 'images/eggplant.png'
 
-let obsWidth = 30;
-let obsHeight = 30;
+let obsWidth = 50;
+let obsHeight = 50;
 
 let chuleta = document.createElement('img')
 chuleta.src= 'images/chuleta.png'
@@ -72,8 +72,8 @@ let intervalID = 0
 
 //Plate INFO
 let plateX = 250
-let plateWidth = 70
-let plateHeight = 70
+let plateWidth = 90
+let plateHeight = 90
 let incrementPlate = 30
 
 //ARROW BTNS
