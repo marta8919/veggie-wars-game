@@ -126,6 +126,7 @@ function generatePoint (img, array){
             array[i].y = -10
             array[i].x = Math.floor(Math.random()*canvas.width)
             array.slice(i, 1)
+            localStorage.setItem("score", score)
         }
 
     }
@@ -154,16 +155,16 @@ function draw(){
     
     if(score < 3){
         levelCard.innerHTML= 'Level 1 : Dinner with friends'
-    } else if (score > 3 && score < 7){
+    } else if (score > 3 && score < 6){
         levelCard.innerHTML = 'Level 2 : Christmas dinner'
         generateObstacle(fish, fishArr)
-    } else if (score >= 7 && score < 14){
+    } else if (score >= 6 && score < 9){
         levelCard.innerHTML = 'Level 3 : BBQ'
         generateObstacle(chuleta, chuletaArr)
         generateObstacle(fish, fishArr)
     } 
     
-    if (score >= 14){
+    if (score >= 9){
         generateObstacle(chuleta, chuletaArr)
         generateObstacle(fish, fishArr)
         greatGame()
@@ -239,17 +240,27 @@ playbtn.addEventListener('click', ()=>{
 
 //LOCAL STORAGE
 
+
 // let itemsArray = localStorage.getItem('items')
 //   ? JSON.parse(localStorage.getItem('items'))
 //   : []
 
+// itemsArray.push(score)
+
+// console.log(itemsArray)
+
 // localStorage.setItem('items', JSON.stringify(itemsArray))
+// const data = JSON.parse(localStorage.getItem('items'))
 
 // const liMaker = (text) => {
-//   const li = document.createElement('li')
-//   li.textContent = `Gamer : ${text}, Score : ${score}`
-//   ul.appendChild(li)
-// }
+//    const li = document.createElement('li')
+//    li.textContent = `Gamer : ${text}, Score : ${score}`
+//    ul.appendChild(li)
+
+//    localStorage.setItem('name', li)
+//  }
+
+
 
 // form.addEventListener('submit', function (e) {
 //   e.preventDefault()
@@ -260,11 +271,13 @@ playbtn.addEventListener('click', ()=>{
 //   input.value = ''
 // })
 
-// clear.addEventListener('click', function () {
-//     localStorage.clear()
-//     while (ul.firstChild) {
-//       ul.removeChild(ul.firstChild)
-//     }
-//   })
+// data.forEach((item) => {
+//   liMaker(item)
+// })
 
-
+// clearBtn.addEventListener('click', function () {
+//   localStorage.clear()
+//   while (ul.firstChild) {
+//     ul.removeChild(ul.firstChild)
+//   }
+// })

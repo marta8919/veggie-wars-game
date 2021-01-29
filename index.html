@@ -17,7 +17,8 @@
     <div id="header">
         <h1>Veggie wars</h1>
     </div>
-        
+    
+    <!-- INTRO CARD -->
     <div id="intro" class="card hidden">
         <p class="text">Surviving some events as a veggie person sometimes is hard, keep the animal products away from your plate and grab the plant based products to increase your score and move to the next level. 
         As you move on to the next level more animal products will fall from the sky.<br><br> Keep acumulating points to help make this world a better place 🙂</p>
@@ -33,6 +34,7 @@
         <button class="text btn" id="start">Start Game</button>
     </div>
 
+    <!-- MUSIC CONTROL BTNS -->
     <div class="group-btn">    
         <h3 class="text hidden" id="cardFinalScore"><span id="finalScore" class="text"></span></h3>
         <h3 class="text hidden" id="level"></h3>
@@ -42,20 +44,27 @@
         </div>
     </div>
 
-        
+    <!-- GAME OVER -->
     <div id="game-over" class="card hidden">
         <p class="text">Oh nooo...<br> <span id="scoreGameOverCard"></span>
         Unfortunately this is not enough to help make this world a better place, and because of that, a cute animal just died ☹️</p>
         <img src="images/friends.jpg" alt="friends" class="friendsimg">
-        <!-- <form>
+
+
+
+        <!-- LOCAL STORAGE -->
+        <!--
             <p class="text">Do you want to save your score?</p>
-            <input type="text" id="item" placeholder="Your name" required class="text">
-        </form>
+            <input type="text" id="name" placeholder="Your name" required class="text">
         <ul class="text"></ul>
         <button class="text third-btn" id="clear">Clear all</button> -->
+
         <button class="text btn" id="re-start">Re-Start the game</button>
+
     </div>
 
+
+    <!-- GREAT GAME SCREEN -->
     <div class="text card hidden" id="greatGame">
         <h1 class="text">Great Game</h1>
         <p class="text">You've reached vegan level 5.</p>
@@ -65,23 +74,28 @@
         <button class="text btn" id="startAgain">I wanna play more!</button>
     </div>
 
+    <!-- TEAM SCREEN -->
     <div class="text card" id="teamcard">
         <h2>This Game was created with the support of</h2>
-        <img src="images/teamvalor.png" alt="Team Valor" class="friendsimg">
+        <img src="images/teamvalor.png" alt="Team Valor" class="friendsimg" id="team">
         <button class="btn text" id="teamvalor">Great, thanks for the heads up!</button>
     </div>
 
+    <!-- CANVAS -->
     <canvas width="1000" height="800" id="canvas" class="hidden"></canvas>
 
+    <!-- REPONSIVE BTNS -->
     <div id="arrowBtnGroup" class="hidden">    
         <button class="text arrows" id="arrowLeft"><</button>
         <button class="text arrows" id="arrowRight">></button>
     </div>
 
+    <!-- FOOTER -->
     <footer class="text">
         <p>© 2020 Created by <a href="http://martagg.com">Marta Gilabert</a> <br> Powered by <a href="images/june.jpg" class="june text-white">June v1.0</a></p>
     </footer>
 
+    <!-- SCRIPTS -->
     <script src="variables.js"></script>
     <script src="index.js"></script>
 

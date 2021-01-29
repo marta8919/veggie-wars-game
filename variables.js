@@ -39,6 +39,8 @@ chuleta.src= 'images/chuleta.png'
 let banana = document.createElement('img')
 banana.src= 'images/banana.png'
 
+let team = document.querySelector('#team')
+
 //COORDINATES OF THE ITEMS
 let obstacle = [{x:0, y:0}]
 let chuletaArr = [{x:100, y:0}]
@@ -87,5 +89,3 @@ let groupArrowBtn = document.querySelector('#arrowBtnGroup')
 // const ul = document.querySelector('ul')
 // const input = document.getElementById('item')   
 // const clearBtn = document.querySelector('#clear')
-
-

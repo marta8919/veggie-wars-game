@@ -171,8 +171,8 @@ form {
 
 
     canvas {
-        width: 360px;
-        height: 380px;
+        width: 370px;
+        height: 370px;
     }
 
     .group-btn{
@@ -214,7 +214,7 @@ form {
 
     canvas {
         width: 700px;
-        height: 450px;
+        height: 500px;
     }
 
     .group-btn{
@@ -254,3 +254,23 @@ form {
     } 
 }
 
+/* @media (max-width: 1500px) and (orientation:portrait){
+    canvas {
+        width: 700px;
+        height: 650px;
+    }
+
+    .arrows{
+        display: inline;
+    }
+
+    .group-btn h3 {
+        margin: 15px;
+    }
+
+    .group-btn{
+        width: auto;
+        display: flex;
+        justify-content: space-between;
+    }
+} */
