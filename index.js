@@ -202,6 +202,7 @@ restart.addEventListener('click', ()=>{
     cardFinalScore.classList.remove('hidden')
     levelCard.classList.remove('hidden')
     groupArrowBtn.classList.remove('hidden')
+    trumpetsSound.pause()
     music.load()
     music.play()
     score = 0
