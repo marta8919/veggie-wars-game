@@ -41,12 +41,16 @@ banana.src= 'images/banana.png'
 
 let team = document.querySelector('#team')
 
+let apple = document.createElement('img')
+apple.src= 'images/apple.png'
+
 //COORDINATES OF THE ITEMS
 let obstacle = [{x:0, y:0}]
 let chuletaArr = [{x:100, y:0}]
 let fishArr = [{x:800, y:0}]
 let bananasArr = [{x:190, y:0}]
 let eggplantArr = [{x:640, y:0}]
+let appleArr = [{x:900, x:0}]
 
 let incrementY = 5
 let incrementYObs = 10
@@ -57,6 +61,7 @@ let isRightArrow = false
 //SIZE OF THE OBSTACLES
 let obsWidth = 40;
 let obsHeight = 40;
+
 
 //MUSIC
 let music = document.querySelector('#sound')

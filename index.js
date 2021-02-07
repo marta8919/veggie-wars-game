@@ -1,6 +1,11 @@
 
 function drawPlate(){
     ctx.drawImage(plate, plateX, canvas.height-plateHeight, plateWidth, plateHeight)
+
+    if (window.screen.width <= 600){
+        plateWidth = 120;
+        plateHeight = 90
+    }
 }
 
 //event listeners for the movement of the plate
@@ -76,16 +81,22 @@ function generateObstacle(img, array){
 
     for (let i = 0; i < array.length; i++){
         ctx.drawImage(img, array[i].x, array[i].y, obsWidth, obsHeight)
+
+        if (window.screen.width <= 600){
+            obsWidth = 90;
+            obsHeight = 60
+        }
+
         array[i].y += incrementYObs
 
-        if (array.length < 8){
+        if (array.length < 6){
             if (array[i].y == 100){
                 array.push({
                     x: Math.floor(Math.random()*canvas.width-obsWidth),
                     y: 0
                 })
             }
-        }
+        } 
 
         if (array[i].y == canvas.height){
             array[i].y = 0
@@ -148,23 +159,24 @@ function draw(){
     }
     
     generatePoint(banana, bananasArr)
+    generatePoint(apple, appleArr)
     generatePoint(eggplant, eggplantArr)
     generateObstacle(pollo, obstacle)
 
     drawPlate()
     
-    if(score < 3){
+    if(score < 5){
         levelCard.innerHTML= 'Level 1 : Dinner with friends'
-    } else if (score > 3 && score < 6){
+    } else if (score > 5 && score < 10){
         levelCard.innerHTML = 'Level 2 : Christmas dinner'
         generateObstacle(fish, fishArr)
-    } else if (score >= 6 && score < 9){
+    } else if (score >= 10 && score < 20){
         levelCard.innerHTML = 'Level 3 : BBQ'
         generateObstacle(chuleta, chuletaArr)
         generateObstacle(fish, fishArr)
     } 
     
-    if (score >= 9){
+    if (score >= 20){
         generateObstacle(chuleta, chuletaArr)
         generateObstacle(fish, fishArr)
         greatGame()
