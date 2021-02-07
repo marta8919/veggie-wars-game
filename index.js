@@ -176,7 +176,7 @@ function draw(){
         generateObstacle(fish, fishArr)
     } 
     
-    if (score >= 20){
+    if (score >= 15){
         generateObstacle(chuleta, chuletaArr)
         generateObstacle(fish, fishArr)
         greatGame()
